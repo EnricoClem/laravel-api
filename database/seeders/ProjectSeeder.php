@@ -29,7 +29,7 @@ class ProjectSeeder extends Seeder
 
             $project->title = $title;
             $project->slug = Str::slug($title);
-            $project->description = $faker->optional()->text(500);
+            $project->description = $faker->text(400);
             $project->project_link = $faker->optional()->url('http');
 
             $project->type_id = $faker->optional()->randomElement($type_ids);
